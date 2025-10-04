@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import logo_ts from "../components/assets/images/_logo_transparent.png";
-import Footer from "@/components/footer";
-import CardNav from "@/components/CardNav";
-import type { CardNavItem } from "@/components/CardNav";
+import Footer from "@/components/common/footer";
+import CardNav from "@/components/common/CardNav";
+import type { CardNavItem } from "@/components/common/CardNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
