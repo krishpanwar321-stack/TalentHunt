@@ -9,6 +9,7 @@ const Home = () => {
         <Hero/>
         <Feature/>
         <Cta/>
+        
       
     </div>
   )
