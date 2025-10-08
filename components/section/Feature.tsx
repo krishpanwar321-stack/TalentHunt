@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Award, Target, Users } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SpotlightCard from "../ui/spotlightCard";
+import SpotlightCard from "../ui/SpotlightCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
