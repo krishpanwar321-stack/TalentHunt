@@ -234,6 +234,18 @@ const CardNav: React.FC<CardNavProps> = ({
               </div>
             </div>
           ))}
+          
+          {/* Mobile Contact Button */}
+          <div className="md:hidden mt-4">
+            <a
+              href="/contact"
+              className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-[calc(0.75rem-0.2rem)] font-medium cursor-pointer transition-colors duration-300 text-center"
+              style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+            >
+              Contact Us
+              <GoArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </nav>
     </div>

@@ -1,60 +1,59 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import logo_ts from "../components/assets/images/_logo_transparent.png";
 import Footer from "@/components/common/footer";
 import CardNav from "@/components/common/CardNav";
 import type { CardNavItem } from "@/components/common/CardNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ 
+  subsets: ["latin"],
+  variable: '--font-montserrat',
+  fallback: ['sans-serif']
+});
 
 const navItems: CardNavItem[] = [
   {
-    label: "About",
+    label: "Home",
     bgColor: "#0D0716",
     textColor: "#fff",
     links: [
-      { label: "Company", href: "/company", ariaLabel: "About Company" },
-      { label: "Careers", href: "/careers", ariaLabel: "About Careers" },
+      { label: "Homepage", href: "/", ariaLabel: "Go to Homepage" },
+      { label: "About Us", href: "/about", ariaLabel: "Learn About Us" },
     ],
   },
   {
-    label: "Projects",
+    label: "Talent Hunt",
     bgColor: "#170D27",
     textColor: "#fff",
     links: [
       {
-        label: "Featured",
-        href: "/projects/featured",
-        ariaLabel: "Featured Projects",
+        label: "Details",
+        href: "/talent-hunt",
+        ariaLabel: "Talent Hunt Details",
       },
       {
-        label: "Case Studies",
-        href: "/projects/case-studies",
-        ariaLabel: "Project Case Studies",
+        label: "Apply Now",
+        href: "/apply",
+        ariaLabel: "Apply for Talent Hunt",
       },
     ],
   },
   {
-    label: "Contact",
+    label: "Resources",
     bgColor: "#271E37",
     textColor: "#fff",
     links: [
       {
-        label: "Email",
-        href: "mailto:hello@example.com",
-        ariaLabel: "Email us",
+        label: "Guidelines",
+        href: "/guidelines",
+        ariaLabel: "Talent Hunt Guidelines",
       },
       {
-        label: "Twitter",
-        href: "https://twitter.com/yourhandle",
-        ariaLabel: "Twitter",
-      },
-      {
-        label: "LinkedIn",
-        href: "https://linkedin.com/company/yourcompany",
-        ariaLabel: "LinkedIn",
+        label: "FAQ",
+        href: "/faq",
+        ariaLabel: "Frequently Asked Questions",
       },
     ],
   },
@@ -74,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <CardNav
           logo={logo_ts.src}
           logoAlt="Company Logo"
